@@ -1,0 +1,10 @@
+{
+  "name": "rogeri-representacoes/contact-api",
+  "description": "Contact form API for Rogeri Representacoes",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}

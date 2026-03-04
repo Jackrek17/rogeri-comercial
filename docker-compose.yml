@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      FORM_STORAGE_FILE: ${FORM_STORAGE_FILE:-/var/www/html/api/storage/submissions.ndjson}
+      FORM_UPLOADS_DIR: ${FORM_UPLOADS_DIR:-/var/www/html/api/storage/uploads}
+    restart: unless-stopped
